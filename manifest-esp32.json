@@ -1,12 +1,13 @@
 {
   "name": "Saj H1 esp32 wifi to Modbus",
   "version": "1",
-  "new_install_prompt_erase": true,
   "builds": [
     {
       "chipFamily": "ESP32",
       "parts": [
-         { "path": "firmware.bin", "offset": 0 }
+          { "path": "bootloader.bin", "offset": 0 },
+        { "path": "partition.bin", "offset": 0x1000 },
+        { "path": "firmware.bin", "offset": 0x8000 }
       ]
     }
   ]
